@@ -1,3 +1,75 @@
-header {
-	color: orange;
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
+
+html, body {
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+}
+body {
+	background: url('../imagens/fundo-madeira.jpg') no-repeat center top;
+	background-size: cover;
+	background-attachment: fixed;
+	/*o background-size : cover se ajusta pra cobrir o container inteiro, mesmo se voce encurtar uma das
+	partes
+	o background-attachment: fixed se ajusta para nao haver rolagem mudando o tamanho da tela, ele deixA
+	fixo na tela o background*/
+
+}
+
+main {
+	position: relative;
+	height: 100vh;
+}
+
+section#telefone {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*com o position absolute ele funciona em volta do relative que eh o main, com o absolute eu posso colo
+	car o top e o left 50% so que isso vai se basear na ponta esquerda superior do objeto, entao eu uso o 
+	transform -50 top e -50 left para deixar o target do objeto no centro, com isso o top e o left vao colo
+	car o objeto centralizado no meio da tela.*/
+	height: 627px;
+	width: 311px;
+	background: no-repeat url('../imagens/frame-iphone.png');
+	/*usei o 'no-repeat'porque a imagem repete de padrao pra preencher o espaco*/
+}
+
+iframe#tela {
+	position: relative;
+	top: 80px;
+	left: 22px;
+	width: 267px;
+	height: 471px;
+}
+section#redes-sociais {
+	text-align: right;
+}
+
+section#redes-sociais img {
+	width: 50px;
+	margin: 10px;
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
+	box-sizing: border-box;
+	/*o box-sizing serve pra configurar o tamanho da caixa do obejto
+	o border box serve para por a borda dentro do box e n'ao fazer os objetos
+	do lado se locomover*/
+}
+section#redes-sociais img:hover {
+	border: 2px solid lightgray;
+	transform: translate(-3px, -3px);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.600);
+	transition: transform 0.3s, border 0.3s;
+	/*o transform:translate vai fazer o box se movimentar dando aquela ideia de
+	pressionado
+	obs : o transition da o tempo pra ferramenta funcionar no total
+	no caso, eu usei pra ativar o transform por completo em 0.3 segundos*/
+}
+

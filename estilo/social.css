@@ -1,0 +1,30 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+/*esse webkit foi criado para editar a scrollbar, colocando width e height = 0 voce esconde a scrollbar*/
+
+img {
+	width: 100vw;
+}
+
+a {
+	display: block;
+	background-color: darkgray;
+	color: white;
+	font-weight: bolder;
+	text-align: center;
+	text-decoration: none;
+	padding: 20px;
+}
+
+a:hover {
+	background-color: red;
+	transition: background-color 1s;
+}
